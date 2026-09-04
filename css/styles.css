@@ -10,10 +10,15 @@
 }
 
 
+html {
+   overflow-x: hidden;
+}
+
 body {
    font-family: "Instrument Sans", Arial, sans-serif;
    background-color: #ffffff;
    color: #3b2a1a;
+   overflow-x: hidden;
 }
 
 
@@ -2257,6 +2262,50 @@ hr{
 
    }
 
+   /* Case study pages: these have higher CSS specificity than the
+      general rules above, so they need their own overrides here */
+
+   .space-project .project-info{
+      grid-template-columns:1fr;
+   }
+
+   .project-overview,
+   .visual-design-grid{
+      grid-template-columns:1fr;
+   }
+
+   .research-container,
+   .refinement-feature{
+      flex-direction:column;
+   }
+
+   .final-card{
+      grid-template-columns:1fr;
+   }
+
+   .toolkit-row{
+      flex-direction:column;
+   }
+
+   .toolkit-row h3{
+      width:100%;
+      margin-bottom:10px;
+   }
+
+   .clarity-project .project-cards,
+   .bowtify-project .project-cards,
+   .space-project   .project-cards{
+      flex-wrap:wrap;
+      gap:30px;
+   }
+
+   .clarity-project .project-cards .card,
+   .bowtify-project .project-cards .card,
+   .space-project   .project-cards .card{
+      width:100%;
+      max-width:420px;
+      min-height:auto;
+   }
 
 }
 
@@ -2513,6 +2562,45 @@ nav{
 
 }
 
+
+/* Case study pages: tighter side padding on phones */
+
+.clarity-project,
+.bowtify-project,
+.space-project{
+
+   padding:0 20px;
+
+}
+
+
+.project-hero h1{
+
+   font-size:2.4rem;
+
+}
+
+
+.design-process h2,
+.key-features h2{
+
+   font-size:2rem;
+
+}
+
+
+.final-card{
+
+   padding:25px;
+
+}
+
+
+.refinement-card{
+
+   padding:25px;
+
+}
 
 
 }
