@@ -2956,3 +2956,470 @@ img { height: auto; }
   .hero { padding-right: 16px !important; padding-left: 16px !important; }
   .hero-heading h2 { font-size: 29px !important; }
 }
+
+
+
+/* =========================================
+   FINAL MOBILE POLISH
+   Preserve desktop design — refine phones
+========================================= */
+
+@media (max-width: 520px) {
+
+  /* ---------- NAVIGATION ---------- */
+
+  header {
+    padding: 10px 14px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  nav .logo {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  .nav-left,
+  .nav-right {
+    align-items: center;
+    gap: 7px;
+  }
+
+  nav a:not(.logo) {
+    font-size: 12px;
+    padding: 8px 11px;
+  }
+
+
+  /* ---------- HOMEPAGE HERO ---------- */
+
+  .hero {
+    padding: 36px 20px 42px;
+  }
+
+  .hero-heading {
+    margin-bottom: 26px;
+  }
+
+  .hero-heading h2 {
+    font-size: clamp(29px, 7.5vw, 36px);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .hero-main {
+    gap: 25px;
+  }
+
+  .hero-image {
+    width: min(76%, 260px);
+  }
+
+  .hero-image img {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-buttons a {
+    font-size: 15px;
+    padding: 12px 17px;
+  }
+
+
+  /* ---------- DESIGN CONNECTION ---------- */
+
+  .design-connection {
+    padding: 27px 18px;
+  }
+
+  .design-connection h2 {
+    font-size: 27px;
+  }
+
+
+  /* ---------- PROJECT SECTIONS ---------- */
+
+  .section-header {
+    padding: 30px 20px 18px;
+    align-items: center;
+  }
+
+  .section-header h2 {
+    font-size: 23px;
+  }
+
+  .view-all {
+    font-size: 14px;
+  }
+
+  .project-cards,
+  .research-cards,
+  .clarity-project .project-cards,
+  .bowtify-project .project-cards,
+  .space-project .project-cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+    padding: 0 20px;
+  }
+
+  .card,
+  .research-card,
+  .research-card .card {
+    width: 100%;
+    max-width: 420px;
+    min-height: 0;
+    margin: 0 auto;
+  }
+
+  .card img,
+  .research-card .card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card h3,
+  .research-card h3 {
+    font-size: 21px;
+    line-height: 1.3;
+  }
+
+  .card p,
+  .research-card p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .tech-tags {
+    gap: 8px;
+  }
+
+  .tech-tags span {
+    font-size: 12px;
+    padding: 7px 11px;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .skills {
+    padding: 42px 20px;
+  }
+
+  .skills h2,
+  .research h2 {
+    font-size: 27px;
+    margin-bottom: 22px;
+  }
+
+  .skills-list {
+    gap: 9px;
+  }
+
+  .skills-list span {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+
+  /* ---------- RESEARCH ---------- */
+
+  .research {
+    padding: 42px 20px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding: 38px 18px;
+    margin-top: 35px;
+  }
+
+  footer p:first-child {
+    font-size: 30px;
+    margin-bottom: 22px;
+  }
+
+  footer a {
+    margin: 7px;
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+
+  footer p:last-child {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- CASE STUDY PAGES ---------- */
+
+  .clarity-project,
+  .bowtify-project,
+  .space-project {
+    padding: 0 20px;
+    margin: 35px auto;
+  }
+
+  .project-hero h1 {
+    font-size: clamp(34px, 9vw, 42px);
+    line-height: 1.1;
+  }
+
+  .project-hero h2 {
+    font-size: 19px;
+    line-height: 1.45;
+  }
+
+  .project-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .project-info {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .project-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .overview-card {
+    min-height: 0;
+    padding: 23px;
+  }
+
+  .design-process,
+  .key-features,
+  .design-refinement {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .feature-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .visual-design-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .refinement-feature {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .final-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 22px;
+    gap: 25px;
+  }
+
+  .carousel {
+    grid-template-columns: 32px minmax(0, 1fr) 32px;
+    gap: 5px;
+  }
+
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.35 / 1;
+  }
+
+}
+
+
+/* Extra-small phones */
+
+@media (max-width: 360px) {
+
+  nav .logo {
+    font-size: 33px;
+  }
+
+  nav a:not(.logo) {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+
+  .hero-heading h2 {
+    font-size: 29px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================
+   FINAL HEADER + FOOTER MOBILE FIX
+   Preserve the desktop portfolio aesthetic
+========================================= */
+
+@media screen and (max-width: 520px) {
+
+    /* HEADER: keep all three areas on one row */
+    header {
+        padding: 10px 8px !important;
+    }
+
+    nav {
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr !important;
+        grid-template-areas: "left logo right" !important;
+        align-items: center !important;
+        gap: 4px !important;
+        width: 100% !important;
+    }
+
+    .nav-left {
+        grid-area: left !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+        gap: 4px !important;
+        min-width: 0 !important;
+    }
+
+    nav .logo {
+        grid-area: logo !important;
+        position: static !important;
+        transform: none !important;
+        justify-self: center !important;
+        width: auto !important;
+        white-space: nowrap !important;
+        font-size: clamp(25px, 7vw, 34px) !important;
+        line-height: 1 !important;
+    }
+
+    .nav-right {
+        grid-area: right !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        min-width: 0 !important;
+    }
+
+    nav a:not(.logo) {
+        font-size: clamp(9px, 2.7vw, 12px) !important;
+        padding: 7px 8px !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+    }
+
+    /* FOOTER: preserve the desktop button appearance */
+    footer {
+        width: 100% !important;
+        padding: 38px 16px !important;
+        margin-top: 35px !important;
+        text-align: center !important;
+    }
+
+    .footer-heading {
+        font-size: clamp(27px, 7vw, 34px) !important;
+        margin-bottom: 24px !important;
+    }
+
+    .footer-links {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 14px !important;
+        width: 100% !important;
+        max-width: 440px !important;
+        margin: 0 auto !important;
+    }
+
+    .footer-links a {
+        display: block !important;
+        flex: 0 1 28% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 12px 5px !important;
+        border-radius: 10px !important;
+        background-color: white !important;
+        color: #6D5739 !important;
+        font-size: 14px !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    .footer-copyright {
+        margin-top: 25px !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* Extra-small phones */
+@media screen and (max-width: 360px) {
+
+    header {
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    .nav-left {
+        gap: 3px !important;
+    }
+
+    nav a:not(.logo) {
+        font-size: 9px !important;
+        padding: 6px 5px !important;
+    }
+
+    nav .logo {
+        font-size: 25px !important;
+    }
+
+    .footer-links {
+        gap: 9px !important;
+    }
+
+    .footer-links a {
+        font-size: 12px !important;
+        padding: 11px 3px !important;
+    }
+}
