@@ -3469,3 +3469,102 @@ footer {
         padding: 11px 3px !important;
     }
 }
+
+
+/* =========================================
+   FINAL SHARED FOOTER — ALL PORTFOLIO PAGES
+========================================= */
+
+footer#footer {
+    width: 100%;
+    background: linear-gradient(90deg, #6D5739, #9B7B50);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 34px 24px 22px;
+    margin-top: 45px;
+    box-sizing: border-box;
+}
+
+footer#footer p.footer-heading {
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 25px;
+    color: #FFFFFF;
+}
+
+footer#footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 auto;
+}
+
+footer#footer .footer-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    color: #6D5739;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 11px 25px;
+    border-radius: 999px;
+    margin: 0;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+footer#footer .footer-links a:hover {
+    background: #EEE5D8;
+    color: #6D5739;
+    transform: translateY(-2px);
+}
+
+footer#footer p.footer-copyright {
+    margin: 25px 0 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+/* Mobile footer */
+@media screen and (max-width: 600px) {
+    footer#footer {
+        padding: 28px 16px 18px;
+        margin-top: 30px;
+    }
+
+    footer#footer p.footer-heading {
+        font-size: 27px;
+        margin-bottom: 19px;
+    }
+
+    footer#footer .footer-links {
+        gap: 10px;
+        max-width: 360px;
+    }
+
+    footer#footer .footer-links a {
+        font-size: 14px;
+        padding: 10px 17px;
+    }
+
+    footer#footer p.footer-copyright {
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    footer#footer .footer-links {
+        gap: 8px;
+    }
+
+    footer#footer .footer-links a {
+        font-size: 13px;
+        padding: 9px 13px;
+    }
+}
