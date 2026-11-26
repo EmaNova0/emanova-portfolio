@@ -2807,3 +2807,152 @@ img { height: auto; }
   .carousel { grid-template-columns: 28px minmax(0, 1fr) 28px; }
   .carousel-btn { width: 28px; font-size: 22px; }
 }
+
+/* =========================================================
+   FINAL PHONE/TABLET OVERRIDES
+   Preserve the desktop portfolio's typography, colors,
+   cards, borders and spacing while fitting smaller screens.
+   Keep this block at the VERY END of styles.css.
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+  /* Keep the same warm header and centered wordmark */
+  header { padding: 12px 18px !important; }
+  nav {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    grid-template-areas: "logo logo" "left right" !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  nav .logo {
+    grid-area: logo !important;
+    position: static !important;
+    justify-self: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+    font-size: clamp(36px, 8vw, 46px) !important;
+    line-height: 1 !important;
+  }
+  .nav-left { grid-area: left !important; justify-content: flex-start !important; gap: 8px !important; }
+  .nav-right { grid-area: right !important; justify-content: flex-end !important; }
+  nav a:not(.logo) { font-size: 13px !important; padding: 8px 12px !important; }
+
+  /* Home hero: retain the desktop image/text relationship, but stack cleanly */
+  .hero { width: 100% !important; padding: 38px 6% 48px !important; }
+  .hero-heading { margin: 0 auto 28px !important; max-width: 760px !important; }
+  .hero-heading h2 { font-size: clamp(30px, 6.5vw, 42px) !important; line-height: 1.12 !important; }
+  .subtitle { font-size: clamp(11px, 2.3vw, 14px) !important; line-height: 1.6 !important; }
+  .hero-main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 26px !important;
+    width: 100% !important;
+  }
+  .hero-image { display: block !important; flex: 0 1 auto !important; width: min(78%, 320px) !important; max-width: 320px !important; }
+  .hero-image img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: cover !important;
+  }
+  .hero-text { width: 100% !important; max-width: 680px !important; text-align: center !important; }
+  .hero-text p { font-size: clamp(16px, 3vw, 19px) !important; line-height: 1.65 !important; }
+  .hero-buttons { display: flex !important; justify-content: center !important; flex-wrap: wrap !important; gap: 12px !important; margin-top: 24px !important; }
+  .hero-buttons a { margin: 0 !important; font-size: 15px !important; padding: 11px 18px !important; }
+
+  /* Preserve the full-width brown connection banner */
+  .design-connection { width: 100% !important; padding: 24px 16px !important; }
+  .design-connection h2 { font-size: clamp(20px, 4vw, 28px) !important; }
+
+  /* Section headings and project cards */
+  .section-header { display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 30px 6% 18px !important; }
+  .section-header h2 { font-size: clamp(22px, 4vw, 27px) !important; }
+  .project-cards, .research-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    width: 100% !important;
+    padding: 0 6% !important;
+  }
+  .project-cards > .card, .research-cards > .research-card,
+  .research-cards .research-card .card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid #d8cbb9 !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    box-shadow: 0 8px 20px rgba(88,70,48,.18) !important;
+  }
+  .project-cards .card img, .research-cards .card img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
+    object-fit: cover !important;
+  }
+  .card-content, .research-card .card-content { padding: 16px !important; }
+  .card h3, .research-card h3 { font-size: clamp(18px, 2.8vw, 22px) !important; line-height: 1.2 !important; }
+  .card p, .research-card p { font-size: 14px !important; line-height: 1.55 !important; }
+  .skills, .research { width: 100% !important; padding: 38px 6% !important; }
+  .skills-list { display: flex !important; flex-wrap: wrap !important; gap: 9px !important; }
+  .skills-list span { font-size: 12px !important; padding: 8px 12px !important; }
+
+  /* About and case-study content must never overflow */
+  .about-hero, .toolkit { padding: 38px 6% !important; }
+  .about-content { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 24px !important; }
+  .about-image { width: min(82%, 330px) !important; }
+  .about-image img { display: block !important; width: 100% !important; height: auto !important; }
+  .about-text { width: 100% !important; text-align: center !important; }
+  .clarity-project, .bowtify-project, .space-project { width: 100% !important; max-width: 1200px !important; padding: 0 6% !important; }
+  .project-info, .space-project .project-info { grid-template-columns: minmax(0, 1fr) !important; gap: 22px !important; }
+  .project-overview, .visual-design-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  .feature-container { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .final-card { grid-template-columns: minmax(0, 1fr) !important; }
+  .carousel { max-width: 100% !important; }
+  .carousel-image { width: 100% !important; max-width: 100% !important; height: auto !important; }
+  footer { width: 100% !important; padding: 34px 6% !important; }
+}
+
+@media screen and (max-width: 520px) {
+  /* On phones use one readable card per row, like the desktop cards */
+  .project-cards, .research-cards,
+  .clarity-project .project-cards, .bowtify-project .project-cards,
+  .space-project .project-cards {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  .project-cards > .card, .research-cards > .research-card,
+  .research-cards .research-card .card { width: 100% !important; max-width: 420px !important; margin: 0 auto !important; }
+  .card-content, .research-card .card-content { padding: 18px !important; }
+  .card h3, .research-card h3 { font-size: 21px !important; }
+  .card p, .research-card p { font-size: 14px !important; }
+  .section-header { padding: 26px 20px 16px !important; }
+  .skills, .research { padding: 34px 20px !important; }
+  .feature-container { grid-template-columns: minmax(0, 1fr) !important; }
+  .feature-card { padding: 20px !important; }
+  .project-hero h1 { font-size: clamp(2rem, 9vw, 2.5rem) !important; }
+  .final-card, .refinement-card { padding: 22px !important; }
+  footer a { display: inline-block !important; margin: 7px !important; }
+}
+
+@media screen and (max-width: 360px) {
+  nav { grid-template-columns: minmax(0, 1fr) !important; grid-template-areas: "logo" "left" "right" !important; justify-items: center !important; }
+  .nav-left, .nav-right { justify-content: center !important; }
+  .hero { padding-right: 16px !important; padding-left: 16px !important; }
+  .hero-heading h2 { font-size: 29px !important; }
+}
