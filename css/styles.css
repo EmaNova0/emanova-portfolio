@@ -429,46 +429,91 @@ nav a {
 }
 
 
-
-/* Footer */
-
+/* FOOTER */
 footer {
-
-   background: linear-gradient(90deg, #6D5739, #9B7B50);
-   color: white;
-   text-align: center;
-   padding: 50px;
-   margin-top: 50px;
-
+  background: linear-gradient(90deg, #6D5739, #9B7B50);
+  color: white;
+  text-align: center;
+  padding: 34px 24px 22px;
+  margin-top: 45px;
 }
 
-footer p:first-child {
-
-   font-size: 42px;
-   margin-bottom: 20px;
-
+.footer-heading {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  margin: 0 0 25px;
 }
 
-footer a {
-
-   background-color: white;
-   color: #6D5739;
-   padding: 15px 60px;
-   border-radius: 10px;
-   margin: 20px;
-   display: inline-block;
-
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto;
 }
 
-footer p:last-child {
-
-   margin-top: 25px;
-   font-size: 15px;
-
+.footer-links a {
+  display: inline-block;
+  background: white;
+  color: #6D5739;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 11px 25px;
+  border-radius: 999px;
+  margin: 0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
+.footer-links a:hover {
+  background: #eee5d8;
+  transform: translateY(-2px);
+}
 
-/* End of Main Page */
+.footer-copyright {
+  margin: 25px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 28px 16px 18px;
+    margin-top: 30px;
+  }
+
+  .footer-heading {
+    font-size: 27px;
+    margin-bottom: 19px;
+  }
+
+  .footer-links {
+    gap: 10px;
+    max-width: 360px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+    padding: 10px 17px;
+  }
+
+  .footer-copyright {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer-links {
+    gap: 8px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+}
 
 /* Start Projects Page*/ 
 
@@ -3348,49 +3393,50 @@ img { height: auto; }
         margin: 0 !important;
     }
 
-    /* FOOTER: preserve the desktop button appearance */
-    footer {
-        width: 100% !important;
-        padding: 38px 16px !important;
-        margin-top: 35px !important;
-        text-align: center !important;
-    }
+    
+/* FOOTER: compact mobile layout */
+footer {
+    width: 100%;
+    padding: 26px 16px 18px;
+    margin-top: 28px;
+    text-align: center;
+}
 
-    .footer-heading {
-        font-size: clamp(27px, 7vw, 34px) !important;
-        margin-bottom: 24px !important;
-    }
+.footer-heading {
+    font-size: 25px;
+    margin: 0 0 18px;
+}
 
-    .footer-links {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        flex-wrap: wrap !important;
-        gap: 14px !important;
-        width: 100% !important;
-        max-width: 440px !important;
-        margin: 0 auto !important;
-    }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
 
-    .footer-links a {
-        display: block !important;
-        flex: 0 1 28% !important;
-        min-width: 0 !important;
-        margin: 0 !important;
-        padding: 12px 5px !important;
-        border-radius: 10px !important;
-        background-color: white !important;
-        color: #6D5739 !important;
-        font-size: 14px !important;
-        text-align: center !important;
-        white-space: nowrap !important;
-    }
+.footer-links a {
+    display: inline-block;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+    padding: 9px 17px;
+    border-radius: 999px;
+    background: white;
+    color: #6D5739;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+}
 
-    .footer-copyright {
-        margin-top: 25px !important;
-        font-size: 13px !important;
-        line-height: 1.6 !important;
-    }
+.footer-copyright {
+    margin: 19px 0 0;
+    font-size: 11px;
+    line-height: 1.5;
+}
 }
 
 /* Extra-small phones */
