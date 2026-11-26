@@ -2604,3 +2604,206 @@ nav{
 
 
 }
+/* =========================================================
+   RESPONSIVE REFINEMENT — November 2026
+   Keeps the existing desktop visual identity while making
+   layouts fluid on tablets and phones.
+   ========================================================= */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { width: 100%; overflow-x: clip; scroll-behavior: smooth; }
+body { width: 100%; min-width: 320px; overflow-x: clip; }
+img, video, iframe { max-width: 100%; }
+img { height: auto; }
+.hero-main > *, .about-content > *, .project-info > *, .research-container > *,
+.refinement-feature > *, .final-card > *, .project-cards > *, .research-cards > * { min-width: 0; }
+
+@media (max-width: 1024px) {
+  .hero { padding: 52px 5%; }
+  .hero-main { gap: 36px; }
+  .hero-text { width: auto; flex: 1 1 0; }
+  .hero-text p { font-size: clamp(18px, 2.1vw, 22px); }
+  .hero-image { flex: 0 1 330px; }
+  .hero-image img { display: block; width: 100%; max-width: 330px; }
+  .project-cards, .research-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px;
+    padding-right: 5%; padding-left: 5%;
+  }
+  .project-cards .card, .research-card, .research-card .card { width: 100%; min-width: 0; }
+  .clarity-project .project-cards .card, .bowtify-project .project-cards .card,
+  .space-project .project-cards .card { width: 100%; min-height: 0; }
+  .about-hero, .toolkit, .research, .skills { padding-right: 5%; padding-left: 5%; }
+  .about-content { gap: 36px; }
+  .about-image { flex: 0 1 40%; }
+  .about-image img { display: block; width: 100%; }
+  .about-text { flex: 1 1 0; }
+  .about-text p { font-size: 19px; }
+  .project-info, .space-project .project-info {
+    grid-template-columns: minmax(190px, .7fr) minmax(0, 1.5fr); gap: 36px;
+  }
+  .project-overview { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .feature-container { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .carousel { gap: 20px; }
+  .carousel-image {
+    width: min(100%, 600px); height: auto; aspect-ratio: 650 / 420; flex: 1 1 auto;
+  }
+  .design-process, .key-features, .design-refinement { width: 90%; }
+  .final-card { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px; }
+}
+
+@media (max-width: 768px) {
+  header { padding: 14px 20px; }
+  nav {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "logo logo" "left right"; align-items: center; gap: 12px 10px;
+  }
+  nav .logo {
+    position: static; grid-area: logo; justify-self: center; width: auto; margin: 0;
+    transform: none; font-size: 44px; line-height: 1.1; white-space: nowrap;
+  }
+  nav .logo:hover { transform: scale(1.03); }
+  .nav-left { grid-area: left; justify-content: flex-start; flex-wrap: wrap; gap: 8px; }
+  .nav-right { grid-area: right; justify-content: flex-end; }
+  nav a:not(.logo) { font-size: 14px; padding: 8px 13px; white-space: nowrap; }
+  .hero { padding: 42px 6%; }
+  .hero-heading { margin-bottom: 30px; }
+  .hero-heading h2 { font-size: clamp(32px, 6vw, 42px); line-height: 1.15; }
+  .subtitle { line-height: 1.6; }
+  .hero-main { flex-direction: column; gap: 28px; }
+  .hero-image { flex: none; width: min(78%, 320px); }
+  .hero-image img { width: 100%; max-width: 320px; margin: 0 auto; }
+  .hero-text { width: 100%; max-width: 620px; }
+  .hero-text p { font-size: 19px; line-height: 1.65; }
+  .hero-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero-buttons a { margin: 0; font-size: 16px; padding: 11px 18px; }
+  .design-connection { padding: 28px 20px; }
+  .section-header { padding: 30px 5% 18px; gap: 16px; }
+  .section-header h2 { font-size: 24px; }
+  .project-cards, .research-cards {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px; padding: 0 5%;
+  }
+  .card, .research-card, .research-card .card { width: 100%; min-width: 0; min-height: 0; }
+  .card img, .research-card .card img { width: 100%; height: 190px; object-fit: cover; }
+  .card-content { padding: 17px; }
+  .card h3, .research-card h3 { font-size: 21px; }
+  .card p, .research-card p { font-size: 14px; }
+  .skills, .research { padding: 44px 5%; }
+  .skills-list { gap: 10px; }
+  .skills-list span { padding: 9px 13px; font-size: 13px; }
+  footer { padding: 38px 20px; }
+  footer p:first-child { font-size: 34px; }
+  footer a { margin: 10px; padding: 13px 28px; }
+
+  .about-hero { padding: 42px 6%; }
+  .about-subtitle { margin-bottom: 28px; line-height: 1.6; }
+  .about-content { flex-direction: column; align-items: center; gap: 28px; }
+  .about-image { width: min(78%, 360px); }
+  .about-image img { width: 100%; }
+  .about-text { width: 100%; max-width: 680px; }
+  .about-text h1 { font-size: 42px; margin-bottom: 22px; }
+  .about-text p { font-size: 18px; line-height: 1.7; margin-bottom: 20px; }
+  .toolkit { padding: 48px 6%; }
+  .toolkit h2 { font-size: 34px; margin-bottom: 35px; }
+  .toolkit-row { flex-direction: column; gap: 12px; }
+  .toolkit-row h3 { width: 100%; font-size: 20px; }
+  .toolkit-row p { font-size: 17px; }
+  .toolkit-tags { grid-template-columns: repeat(2, minmax(0, max-content)); gap: 10px; }
+
+  .clarity-project, .bowtify-project, .space-project {
+    width: 100%; margin: 42px auto; padding: 0 5%;
+  }
+  .back-link { margin-bottom: 28px; }
+  .project-hero h1 { font-size: clamp(2.5rem, 7vw, 3.5rem); line-height: 1.08; overflow-wrap: anywhere; }
+  .project-hero h2 { font-size: 1.35rem; line-height: 1.4; }
+  .project-description { font-size: 1rem; }
+  .project-info, .space-project .project-info { grid-template-columns: 1fr; gap: 24px; }
+  .info-row { margin-bottom: 16px; }
+  .objective-column h3 { font-size: 1.7rem; }
+  .project-banner { margin-top: 38px; }
+  .project-banner img { width: 100%; height: auto; }
+  .project-overview { grid-template-columns: 1fr; gap: 16px; margin: 42px 0; }
+  .overview-card { min-height: 0; padding: 25px; }
+  .design-process, .key-features, .design-refinement { width: 100%; margin: 42px auto; }
+  .design-process h2, .key-features h2 { font-size: 2.2rem; }
+  .research-container, .refinement-feature { flex-direction: column; gap: 20px; }
+  .case-research-card { width: 100%; padding: 24px; }
+  .carousel {
+    display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 8px; width: 100%; margin-top: 26px;
+  }
+  .carousel-image { width: 100%; min-width: 0; height: auto; aspect-ratio: 1.35 / 1; border-width: 4px; }
+  .carousel-image img { width: 100%; height: 100%; object-fit: contain; }
+  .carousel-btn { width: 42px; height: 48px; font-size: 30px; }
+  .feature-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 28px 0 48px; }
+  .feature-card { padding: 22px; }
+  .feature-card h4 { font-size: 1.2rem; }
+  .visual-design-grid { grid-template-columns: 1fr; gap: 32px; }
+  .refinement-feature { margin-bottom: 42px; }
+  .refinement-card { padding: 28px; }
+  .final-section { margin: 55px auto; }
+  .final-card { grid-template-columns: 1fr; gap: 28px; padding: 30px; }
+  .conclusion-text h2 { font-size: 1.9rem; }
+  .prototype-video video { width: 100%; }
+  .clarity-project .project-cards, .bowtify-project .project-cards, .space-project .project-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 0;
+  }
+  .clarity-project .project-cards .card, .bowtify-project .project-cards .card,
+  .space-project .project-cards .card { width: 100%; max-width: none; min-height: 0; }
+}
+
+@media (max-width: 520px) {
+  header { padding: 12px 14px; }
+  nav { grid-template-columns: minmax(0, 1fr) auto; gap: 10px 6px; }
+  nav .logo { font-size: 40px; }
+  .nav-left, .nav-right { gap: 6px; }
+  nav a:not(.logo) { font-size: 12px; padding: 7px 10px; }
+  .hero { padding: 34px 20px; }
+  .hero-heading h2 { font-size: clamp(29px, 8vw, 36px); }
+  .subtitle { font-size: 12px; letter-spacing: .6px; }
+  .hero-image { width: min(82%, 290px); }
+  .hero-text p { font-size: 17px; }
+  .section-header { align-items: flex-start; padding: 28px 20px 16px; }
+  .section-header h2 { font-size: 22px; }
+  .project-cards, .research-cards, .clarity-project .project-cards,
+  .bowtify-project .project-cards, .space-project .project-cards {
+    grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 0 20px;
+  }
+  .card, .research-card, .research-card .card { width: 100%; max-width: 420px; margin: 0 auto; }
+  .card img, .research-card .card img { height: auto; aspect-ratio: 16 / 9; }
+  .research { padding: 38px 20px; }
+  .about-hero, .toolkit { padding: 36px 20px; }
+  .about-image { width: min(88%, 330px); }
+  .about-text h1 { font-size: 36px; }
+  .about-text p { font-size: 16px; }
+  .toolkit h2 { font-size: 30px; }
+  .toolkit-row p { font-size: 16px; }
+  .toolkit-tags { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .toolkit-tags span { padding: 9px 12px; font-size: 13px; overflow-wrap: anywhere; }
+  .clarity-project, .bowtify-project, .space-project { margin: 32px auto; padding: 0 20px; }
+  .project-hero h1 { font-size: 2.35rem; }
+  .project-hero h2 { font-size: 1.2rem; }
+  .overview-card { padding: 22px; }
+  .design-process h2, .key-features h2 { font-size: 1.85rem; }
+  .feature-container { grid-template-columns: 1fr; }
+  .carousel { grid-template-columns: 34px minmax(0, 1fr) 34px; gap: 5px; }
+  .carousel-btn { width: 34px; font-size: 25px; }
+  .final-card { padding: 22px; }
+  .refinement-card { padding: 22px; }
+  footer { padding: 34px 18px; }
+  footer p:first-child { font-size: 29px; }
+  footer a { padding: 12px 22px; }
+}
+
+@media (max-width: 360px) {
+  header { padding-right: 10px; padding-left: 10px; }
+  nav {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "logo" "left" "right"; justify-items: center;
+  }
+  .nav-left, .nav-right { justify-content: center; }
+  nav a:not(.logo) { font-size: 12px; padding: 7px 12px; }
+  .hero-buttons a { width: 100%; max-width: 240px; text-align: center; }
+  .carousel { grid-template-columns: 28px minmax(0, 1fr) 28px; }
+  .carousel-btn { width: 28px; font-size: 22px; }
+}
