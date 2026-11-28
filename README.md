@@ -1,63 +1,16 @@
-# Ema Nova Portfolio
+# React + Vite
 
-Welcome to my personal portfolio website! This website showcases my work in UX/UI design, Human-Computer Interaction (HCI), Human-Centered AI research, and front-end development.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Live Website
+Currently, two official plugins are available:
 
-🌐 Portfolio: https://emanova-portfolio.netlify.app/
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## About Me
+## React Compiler
 
-I am a Computer Science student at UNC Charlotte concentrating in Human-Computer Interaction. My interests focus on designing meaningful digital experiences through user-centered design, AI explainability, and interactive interfaces.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Featured Projects
+## Expanding the ESLint configuration
 
-### Clarity
-AI-powered personal finance application designed to help teenagers understand and manage their finances through an intuitive experience.
-
-**Focus:**
-- UX/UI Design
-- User Research
-- Mobile App Design
-- Human-Centered AI
-
----
-
-### Bowtify
-AI explainability platform focused on helping users understand complex AI-generated insights through clearer and more transparent interfaces.
-
-**Focus:**
-- AI Explainability
-- UX Research
-- Interface Design
-- Human-AI Interaction
-
----
-
-### Space Blog
-A full-stack blog experience focused on creating an interactive community platform with user authentication and comments.
-
-**Focus:**
-- Front-End Development
-- React
-- User Experience
-- Web Development
-
----
-
-## Technologies
-
-- HTML
-- CSS
-- JavaScript
-- React
-- Git/GitHub
-- Figma
-- VS Code
-
-
-📬 Connect With Me :
-
-* Email: emanovaoficial@gmail.com
-* LinkedIn: https://www.linkedin.com/in/emanova
-* GitHub: https://github.com/EmaNova0
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
